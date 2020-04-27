@@ -18,5 +18,5 @@ if __name__ == "__main__":
         print("please input search content")
     else:
         main(sys.argv)
-    
+
 
