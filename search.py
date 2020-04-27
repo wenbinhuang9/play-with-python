@@ -4,6 +4,7 @@ import sys
 
 path = ["/Users/ben/Downloads"]
 
+
 def main(argv):
     search_content = argv[1]
     for p in path:

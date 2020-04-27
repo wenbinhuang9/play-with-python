@@ -1,5 +1,12 @@
 import  os
 
+
+def replace(output):
+    output = output.strip()
+    output = output.replace(' ', '\ ')
+    output = output.replace('(', '\(')
+    output = output.replace(')', '\)')
+    return output
 path = "/Users/ben/Downloads"
 os.chdir(path)
 
@@ -13,5 +20,6 @@ output = output.replace(')', '\)')
 
 opencmd = "open " + output
 os.popen(opencmd)
+
 
 print("success")
