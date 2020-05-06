@@ -1,2 +1,2 @@
-# play-with-python-re
-python regular expression
+# play-with-python
+some python scripts and demos. 
