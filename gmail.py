@@ -1,4 +1,4 @@
-
+## todo the ability to store the email and  retreive, enabling intelligence.
 
 import yagmail
 import  os
