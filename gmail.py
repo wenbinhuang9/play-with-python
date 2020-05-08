@@ -7,6 +7,18 @@ frommail = ""
 password = ""
 yag = yagmail.SMTP(frommail, password)
 
+tomailstorefile = "~/bin/tomailer.txt"
+
+
+def writetomail():
+    pass
+
+def loadtomail():
+    pass
+
+def match():
+    pass
+
 
 def sendMail(mail, title, content, attachment):
     contents = [content]
