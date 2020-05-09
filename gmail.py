@@ -10,15 +10,29 @@ yag = yagmail.SMTP(frommail, password)
 tomailstorefile = "~/bin/tomailer.txt"
 
 
-def writetomail():
-    pass
-
 def loadtomail():
-    pass
+    with open(tomailstorefile, "w+") as fd:
+        lines = fd.readlines()
 
-def match():
-    pass
+    mailset = set(lines)
 
+    return mailset
+
+def writetomail(tomail):
+    mailset = loadtomail()
+
+    if tomail not in mailset:
+        with open(tomailstorefile, "w+") as fd:
+            fd.writelines([tomail])
+
+
+def match(tomail):
+    mailset = loadtomail()
+
+    for mail in mailset:
+        if tomail in mail:
+            return mail
+    return None
 
 def sendMail(mail, title, content, attachment):
     contents = [content]
