@@ -1,10 +1,7 @@
 ##this can be only to used in Mac platform
 #- the textutil and cupsfilter command is supported by mac os
 import os
-
-
 import sys
-
 
 def doc2pdf(filename):
 
