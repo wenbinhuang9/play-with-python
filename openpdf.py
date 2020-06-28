@@ -8,14 +8,15 @@ if len(sys.argv) < 2:
     exit(0)
 
 def openByFileName(filename):
-    os.popen('open ' + filename + ' \'Foxit Reader\'')
+    os.popen('open ' + filename + ' -a \'Foxit Reader\'')
 
 def openBySearching(searchContent):
     stream = os.popen('s ' + searchContent)
     filename = stream.read()
 
-    stream = openByFileName(filename)
-    print(stream.read())
+    filename = filename.strip()
+    print("the search file name is {0}".format(filename))
+    openByFileName(filename)
 
 if len(sys.argv) == 2:
     filename = sys.argv[1]
